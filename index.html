@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Gourmet - Fine Dining Experience</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }}
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div id="root"></div>
+  <script type="text/babel">
+
+function App() {
+  return (
+    <div className="text-gray-800">
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-red-600">Le Gourmet</h1>
+          <nav className="space-x-6 hidden md:block">
+            <a href="#about" className="hover:text-red-600">About</a>
+            <a href="#menu" className="hover:text-red-600">Menu</a>
+            <a href="#gallery" className="hover:text-red-600">Gallery</a>
+            <a href="#contact" className="hover:text-red-600">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="bg-cover bg-center h-screen text-white flex items-center justify-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092')"}}>
+        <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center">
+          <h2 className="text-5xl font-bold mb-4">A Taste of Elegance</h2>
+          <p className="text-xl mb-6">Fine dining, exquisite wines, unforgettable experiences.</p>
+          <a href="#menu" className="bg-red-600 px-6 py-2 rounded hover:bg-red-700 transition text-white">Explore Menu</a>
+        </div>
+      </section>
+
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-semibold mb-4">About Us</h3>
+          <p className="text-lg text-gray-600">At Le Gourmet, we bring the finest cuisine and a luxurious ambiance to your plate. Experience our world-class service and indulge in culinary artistry curated by top chefs.</p>
+        </div>
+      </section>
+
+      <section id="menu" className="py-20 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <h3 className="text-3xl font-semibold text-center mb-12">Our Menu</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white shadow-md p-6 rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Truffle Pasta</h4>
+              <p className="text-gray-600">Homemade pasta with white truffle oil and parmesan.</p>
+            </div>
+            <div className="bg-white shadow-md p-6 rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Seared Salmon</h4>
+              <p className="text-gray-600">Perfectly seared Atlantic salmon with lemon butter sauce.</p>
+            </div>
+            <div className="bg-white shadow-md p-6 rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Chocolate Lava Cake</h4>
+              <p className="text-gray-600">Decadent molten chocolate center served warm.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h3 className="text-3xl font-semibold mb-12">Gallery</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <img className="rounded-lg shadow-md" src="https://images.unsplash.com/photo-1600891964373-dc9f55e9c7b8" alt="dish"/>
+            <img className="rounded-lg shadow-md" src="https://images.unsplash.com/photo-1543353071-873f17a7a088" alt="ambiance"/>
+            <img className="rounded-lg shadow-md" src="https://images.unsplash.com/photo-1550966871-3ed5d80b35f4" alt="interior"/>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 bg-gray-100">
+        <div className="max-w-xl mx-auto px-4 text-center">
+          <h3 className="text-3xl font-semibold mb-6">Contact Us</h3>
+          <p className="text-gray-600 mb-6">123 Culinary Street, Flavor Town, FT 45678</p>
+          <p className="text-gray-600 mb-6">Call us: (123) 456-7890</p>
+          <a href="mailto:info@legourmet.com" className="text-red-600 hover:underline">info@legourmet.com</a>
+        </div>
+      </section>
+
+      <footer className="bg-white text-center py-6 border-t">
+        <p>&copy; 2025 Le Gourmet. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
